@@ -1,39 +1,48 @@
 {
-  "name": "array-flatten",
-  "version": "1.1.1",
-  "description": "Flatten an array of nested arrays into a single flat array",
-  "main": "array-flatten.js",
-  "files": [
-    "array-flatten.js",
-    "LICENSE"
-  ],
-  "scripts": {
-    "test": "istanbul cover _mocha -- -R spec"
-  },
+  "name": "balanced-match",
+  "description": "Match balanced character pairs, like \"{\" and \"}\"",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/blakeembrey/array-flatten.git"
+    "url": "git://github.com/juliangruber/balanced-match.git"
+  },
+  "homepage": "https://github.com/juliangruber/balanced-match",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/test.js",
+    "bench": "matcha test/bench.js"
+  },
+  "devDependencies": {
+    "matcha": "^0.7.0",
+    "tape": "^4.6.0"
   },
   "keywords": [
-    "array",
-    "flatten",
-    "arguments",
-    "depth"
+    "match",
+    "regexp",
+    "test",
+    "balanced",
+    "parse"
   ],
   "author": {
-    "name": "Blake Embrey",
-    "email": "hello@blakeembrey.com",
-    "url": "http://blakeembrey.me"
+    "name": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/blakeembrey/array-flatten/issues"
-  },
-  "homepage": "https://github.com/blakeembrey/array-flatten",
-  "devDependencies": {
-    "istanbul": "^0.3.13",
-    "mocha": "^2.2.4",
-    "pre-commit": "^1.0.7",
-    "standard": "^3.7.3"
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/20..latest",
+      "firefox/nightly",
+      "chrome/25..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
   }
 }
